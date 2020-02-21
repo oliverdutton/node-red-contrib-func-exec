@@ -90,6 +90,7 @@ module.exports = function(RED) {
 			setTimeout : setTimeout,
 			clearTimeout : clearTimeout
 		};
+		var env = process.env;
 		var context = vm.createContext(sandbox);
 		try {
 			this.script = vm.createScript(functionText);
